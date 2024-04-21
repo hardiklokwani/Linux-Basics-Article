@@ -1,0 +1,42 @@
+What_are_Targets_in_Linux_?_🐧
+
+> In simpler terms, think of targets in Linux like different modes your computer can be in. 
+> Each mode is designed for different tasks.
+> For example, one mode might focus on just basic functions, while another might be all about running programs with a fancy graphical interface. 
+> So, targets help your computer know what it should be doing at any given time.
+
+> To check our system's current default target we use this command 📝:
+
+## systemctl get-default ##
+
+01 - multi-user.target -> The multiuser target in Linux is a Command Line Interface and it's like a mode where multiple people can use the computer at the same time.
+It's perfect for situations where several users need to log in and do their own stuff on the computer simultaneously.
+So, when your system is in the multiuser target, it's ready for several users to work on it together.
+
+02 - graphical.target -> The multiuser target in Linux is a Graphical User Interface and it's like a mode where multiple people can use the computer at the same time. 
+It's perfect for situations where several users need to log in and do their own stuff on the computer simultaneously. 
+So, when your system is in the multiuser target, it's ready for several users to work on it together.
+
+03 - emergency.target -> The emergency target in Linux is like a special mode for fixing serious problems when your system isn't working properly.
+It's a simplified environment that provides essential tools for troubleshooting and repairing issues that might prevent your computer from starting normally.
+So, when your system is in the emergency target, it's focused on helping you fix problems and get your computer back up and running smoothly.
+
+04 - rescue.target -> It's similar to the emergency target but provides more advanced tools for diagnosing and repairing problems.
+The rescue target is typically used when your system is so messed up that it can't even start properly.
+It gives you access to a basic environment where you can fix problems with your system's configuration, recover files, or repair disk issues.
+So, when your system is in the rescue target, it's focused on helping you rescue your system from major troubles.
+
+> To change our default target we use the command :
+
+> Let's assume that our current default target is a multi-user.target but we want to change it into a graphical target ->
+
+## sudo systemctl set-default graphical.target ##
+
+> To change current target without messing with our default target we use the command :
+
+> Let's assume that our current default target is a multi-user.target but we want to switch into a graphical target without changing anything by default ->
+
+## sudo systemctl isolate graphical.target ##
+
+> I hope that it was helpful and let's continue learning and exploring!
+> Happy exploring! 🚀🐧
